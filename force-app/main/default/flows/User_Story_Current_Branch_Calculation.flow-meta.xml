@@ -1,44 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
-    <decisions>
-        <name>Check_User_Story_Source_Branch</name>
-        <label>Check User Story Source Branch</label>
-        <locationX>396</locationX>
-        <locationY>671</locationY>
-        <defaultConnector>
-            <targetReference>Loop_Pipeline_Connections</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Found_user_story_source_branch</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Loop_Pipeline_Connections.copado__Source_Environment__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>$Record.copado__Environment__c</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_current_branch_of_the_user_story</targetReference>
-            </connector>
-            <label>Found user story source branch</label>
-        </rules>
-    </decisions>
     <interviewLabel>User Story Base Branch Control {!$Flow.CurrentDateTime}</interviewLabel>
     <label>User Story Current Branch Calculation</label>
-    <loops>
-        <name>Loop_Pipeline_Connections</name>
-        <label>Loop Pipeline Connections</label>
-        <locationX>176</locationX>
-        <locationY>551</locationY>
-        <collectionReference>Pipeline_Connections</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Check_User_Story_Source_Branch</targetReference>
-        </nextValueConnector>
-    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -65,7 +29,7 @@
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Loop_Pipeline_Connections</targetReference>
+            <targetReference>Update_user_story_current_branch</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -75,7 +39,14 @@
                 <elementReference>User_Story_Pipeline.Id</elementReference>
             </value>
         </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <filters>
+            <field>copado__Source_Environment__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.copado__Environment__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>copado__Deployment_Flow_Step__c</object>
         <sortField>copado__Branch__c</sortField>
         <sortOrder>Asc</sortOrder>
@@ -111,17 +82,14 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Update_current_branch_of_the_user_story</name>
-        <label>Update current branch of the user story</label>
-        <locationX>264</locationX>
-        <locationY>791</locationY>
-        <connector>
-            <targetReference>Loop_Pipeline_Connections</targetReference>
-        </connector>
+        <name>Update_user_story_current_branch</name>
+        <label>Update user story current branch</label>
+        <locationX>176</locationX>
+        <locationY>551</locationY>
         <inputAssignments>
             <field>Current_Branch__c</field>
             <value>
-                <elementReference>Loop_Pipeline_Connections.copado__Branch__c</elementReference>
+                <elementReference>Pipeline_Connections.copado__Branch__c</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
