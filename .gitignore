@@ -1,0 +1,4 @@
+.sf/
+.sfdx/
+
+force-app/main/default/profiles/*
