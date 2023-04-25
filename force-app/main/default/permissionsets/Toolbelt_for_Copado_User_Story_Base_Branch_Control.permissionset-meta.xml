@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set has necessary permissions for prevention deployment of a user stories base branch functionality</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>copado__User_Story__c.Current_Branch__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>copado__User_Story__c.copado__Environment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Toolbelt for Copado - User Story Base Branch Control</label>
+</PermissionSet>

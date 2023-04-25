@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_deployment_when_story_in_base</fullName>
+    <active>true</active>
+    <description>This validation rule prevents deployment of a user story past its base branch</description>
+    <errorConditionFormula>copado__User_Story__r.Current_Branch__c  =  copado__User_Story__r.copado__Base_Branch__c</errorConditionFormula>
+    <errorMessage>You cannot deploy a user story past its base branch</errorMessage>
+</ValidationRule>
