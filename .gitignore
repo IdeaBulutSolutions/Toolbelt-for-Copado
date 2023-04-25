@@ -2,3 +2,4 @@
 .sfdx/
 
 force-app/main/default/profiles/*
+force-app/main/default/reportTypes/*
