@@ -9,7 +9,7 @@ Latest version link: https://login.salesforce.com/packaging/installPackage.apexp
 ## Features
  
 ### Scheduled Deployment File Remover
- - Featured inspired by below idea, to automaticall free up storage space on the Copado org
+ - Featured inspired by below idea, to automatically free up storage space on the Copado org
  - Activate Scheduled Deployment File Remover flow
 
 ### Auto select Attach file to deployment
@@ -22,6 +22,8 @@ Latest version link: https://login.salesforce.com/packaging/installPackage.apexp
  - Assign Toolbelt for Copado - User Story Base Branch Control permission set to your users
 
 ## Change log
+- 1.0.0
+  - Fixed empty user story base branch causing flow to fail problem
 - 0.2.0
   - Prevention of deployment of a user story past its base branch
 - 0.1.0

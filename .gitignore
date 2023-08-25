@@ -3,3 +3,4 @@
 
 force-app/main/default/profiles/*
 force-app/main/default/reportTypes/*
+force-app/main/default/featureParameters/*

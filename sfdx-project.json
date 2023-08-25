@@ -10,7 +10,7 @@
             ],
             "package": "Toolbelt for Copado",
             "versionName": "Summer 2023",
-            "versionNumber": "0.2.0.NEXT"
+            "versionNumber": "1.0.0.NEXT"
         }
     ],
     "name": "Toolbelt for Copado",
@@ -20,6 +20,7 @@
         "Copado Deployer@19.3.0.0": "04t5p000001BmkG",
         "Toolbelt for Copado": "0Ho8d000000sYNRCA2",
         "Toolbelt for Copado@0.1.0-1": "04t8d000000EfhZAAS",
-        "Toolbelt for Copado@0.2.0-1": "04t8d000000EfmfAAC"
+        "Toolbelt for Copado@0.2.0-1": "04t8d000000EfmfAAC",
+        "Toolbelt for Copado@1.0.0-1": "04t8d000000EmVmAAK"
     }
 }
