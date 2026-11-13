@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Story_Title_Addition_Mode__c</fullName>
+    <description>Whether the value is added to the start (Prefix) or the end (Suffix) of the user story title.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Prefix: [PROJ-1234] Add new object. Suffix: Add new object [PROJ-1234].</inlineHelpText>
+    <label>User Story Title Addition Mode</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prefix</fullName>
+                <default>true</default>
+                <label>Prefix</label>
+            </value>
+            <value>
+                <fullName>Suffix</fullName>
+                <default>false</default>
+                <label>Suffix</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

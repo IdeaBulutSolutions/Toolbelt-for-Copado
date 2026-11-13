@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Story_Title_Allow_Truncation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Allows cutting the end of the original title when the title with the addition would exceed 255 characters.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>When checked, the end of a long title is cut so the addition fits in 255 characters. When unchecked, the text is never cut: if the addition does not fit it is left out, and a tag for an old key is removed.</inlineHelpText>
+    <label>User Story Title Allow Truncation</label>
+    <type>Checkbox</type>
+</CustomField>
