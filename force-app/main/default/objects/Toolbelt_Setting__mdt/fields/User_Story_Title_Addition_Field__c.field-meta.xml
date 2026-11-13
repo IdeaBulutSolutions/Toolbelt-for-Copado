@@ -4,7 +4,7 @@
     <description>API name of the User Story field whose value is added to the user story title.</description>
     <externalId>false</externalId>
     <fieldManageability>SubscriberControlled</fieldManageability>
-    <inlineHelpText>API name of a field on User Story, for example copadoccmint__JIRA_Key__c. If the field does not exist, the title is not changed.</inlineHelpText>
+    <inlineHelpText>API name of a field on User Story, for example copadoccmint__JIRA_key__c. If the field does not exist, the title is not changed.</inlineHelpText>
     <label>User Story Title Addition Field</label>
     <length>80</length>
     <required>false</required>

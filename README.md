@@ -26,7 +26,7 @@ Latest version link: https://login.salesforce.com/packaging/installPackage.apexp
  - When the key changes the tag is replaced, and when the key is cleared the tag is removed
  - Configure it in Setup > Custom Metadata Types > Toolbelt Setting > Default:
    - User Story Title Addition Enabled: turns the feature on (off by default)
-   - User Story Title Addition Field: API name of the user story field to add, `copadoccmint__JIRA_Key__c` by default
+   - User Story Title Addition Field: API name of the user story field to add, `copadoccmint__JIRA_key__c` by default
    - User Story Title Addition Mode: `Prefix` or `Suffix`
    - User Story Title Allow Truncation: when the title would exceed 255 characters, cut the end of the original title. When unchecked, the text is not cut and the addition is left out (a tag for an old key is removed so the title never shows the wrong key)
 
