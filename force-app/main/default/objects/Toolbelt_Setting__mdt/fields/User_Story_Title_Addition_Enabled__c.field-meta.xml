@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Story_Title_Addition_Enabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Turns on adding the value of the User Story Title Addition Field to the user story title.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>When checked, the value of the User Story Title Addition Field is added to the user story title as a prefix or suffix.</inlineHelpText>
+    <label>User Story Title Addition Enabled</label>
+    <type>Checkbox</type>
+</CustomField>
